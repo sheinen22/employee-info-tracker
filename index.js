@@ -1,5 +1,12 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const jest = require("jest");
+
+const Intern = require('./Develop/lib/Intern');
+const Engineer = require('./Develop/lib/Engineer');
+const Manager = require('./Develop/lib/Manager');
+
+//need an update area - possibly three empty arrays?
 
 const initQuestions = [
     {
@@ -66,3 +73,12 @@ const internQs = [
         name: "college"
     }
 ]
+
+//init function to prompt questions and push new manager and get to next series of questions
+
+//next function - think i can use if/else to separate whether intern or engineer was chosen to run one of the next functions
+
+//engineer function to prompt engineer questions and push new engineer, should be almost the same as manager function - office + git hub and return to questions
+
+//intern function to prompt inter questions and push new engineer, exactly like engineer function but - github + school.
+
