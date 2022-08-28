@@ -81,10 +81,22 @@ const internQs = [
 function init() {
     inquirer.prompt(initQuestions).then(({name, id, email, office}) => {
         managerArr.push(new Manager (name, id, email, office))
+        next()
     })
 }
 
 //next function - think i can use if/else to separate whether intern or engineer was chosen to run one of the next functions
+function next() {
+    inquirer.prompt(initQuestions2).then((data) => {
+        if (data.adding === "Engineer") {
+            // add engineer function
+        } else if (data.adding === "Intern") {
+            // add intern function
+        } else {
+            //add writetofile function
+        }
+    })
+}
 
 //engineer function to prompt engineer questions and push new engineer, should be almost the same as manager function - office + git hub and return to questions
 
