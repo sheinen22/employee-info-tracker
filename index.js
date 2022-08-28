@@ -89,7 +89,7 @@ function init() {
 function next() {
     inquirer.prompt(initQuestions2).then((data) => {
         if (data.adding === "Engineer") {
-            // add engineer function
+            engineerPrompt()
         } else if (data.adding === "Intern") {
             // add intern function
         } else {
@@ -99,6 +99,11 @@ function next() {
 }
 
 //engineer function to prompt engineer questions and push new engineer, should be almost the same as manager function - office + git hub and return to questions
-
+function engineerPrompt() {
+    inquirer.prompt(engineerQs).then(({name, email, id, github}) => {
+        engineerArr.push(new Engineer (name, email, id, github))
+        next()
+    })
+}
 //intern function to prompt inter questions and push new engineer, exactly like engineer function but - github + school.
 
