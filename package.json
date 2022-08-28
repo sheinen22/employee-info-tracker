@@ -1,0 +1,27 @@
+{
+"name": "employee-info-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheinen22/employee-info-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheinen22/employee-info-tracker/issues"
+  },
+  "homepage": "https://github.com/sheinen22/employee-info-tracker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.1.2"
+  }
+}
