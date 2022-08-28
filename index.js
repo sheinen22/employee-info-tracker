@@ -7,6 +7,9 @@ const Engineer = require('./Develop/lib/Engineer');
 const Manager = require('./Develop/lib/Manager');
 
 //need an update area - possibly three empty arrays?
+const managerArr = [];
+const engineerArr = [];
+const internArr = [];
 
 const initQuestions = [
     {
@@ -75,6 +78,11 @@ const internQs = [
 ]
 
 //init function to prompt questions and push new manager and get to next series of questions
+function init() {
+    inquirer.prompt(initQuestions).then(({name, id, email, office}) => {
+        managerArr.push(new Manager (name, id, email, office))
+    })
+}
 
 //next function - think i can use if/else to separate whether intern or engineer was chosen to run one of the next functions
 
