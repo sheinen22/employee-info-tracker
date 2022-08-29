@@ -1,6 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const jest = require("jest");
+const fillData = require('./src/logic')
 
 const Intern = require('./Develop/lib/Intern');
 const Engineer = require('./Develop/lib/Engineer');
@@ -114,5 +115,7 @@ function internPrompt() {
 }
 
 function writeToFile(managerArr, engineerArr, internArr) {
-    //fs.writeToFile(".pathtohtml", need to link a js from src? with a return statement(managerArr, engineerArr, internArr), (err) => (err) ? console.log("could not generate html") : console.log("HTML successfully generated")
+    fs.writeToFile("./dist/index.html", fillData(managerArr, engineerArr, internArr), (err) => (err) ? console.log("could not generate html") : console.log("HTML successfully generated"))
 }
+
+init()
