@@ -14,10 +14,10 @@ function fillData(managerArr, engineerArr, internArr) {
         ${managerArr.map((data) => managerFill(data))}
     </div>
     <div>
-        engineer info here ***********
+        ${engineerArr.map((data) => engineerFill(data))}
     </div>
     <div>
-        intern info here************
+        ${internArr.map((data) => internFill(data))}
     </div>
     `
 }
@@ -29,9 +29,39 @@ const managerFill = (manager) => {
         <div class="card-body">
             <div>Name: ${manager.getName()}</div>
             <div>ID: ${manager.getId()}</div>
-            <div>Email: ${manager.getEmail}</div>
+            <div>Email: ${manager.getEmail()}</div>
             <div>Office Number: ${manager.getOfficeNumber()}</div> 
         </div>
     </div>
     `
 }
+
+const engineerFill = (engineer) => {
+    return `
+    <div class="card" id="engineer">
+        <div>${engineer.getRole()}</div>
+        <div class="card-body">
+            <div>Name: ${engineer.getName()}</div>
+            <div>ID: ${engineer.getId()}</div>
+            <div>Email: ${engineer.getEmail()}</div>
+            <div>Github: ${engineer.getGithub()}</div> 
+        </div>
+    </div>
+    `
+}
+
+const internFill = (intern) => {
+    return `
+    <div class="card" id="intern">
+        <div>${intern.getRole()}</div>
+        <div class="card-body">
+            <div>Name: ${intern.getName()}</div>
+            <div>ID: ${intern.getId()}</div>
+            <div>Email: ${intern.getEmail()}</div>
+            <div>School: ${intern.getCollege()}</div> 
+        </div>
+    </div>
+    `
+}
+
+module.exports = fillData;
