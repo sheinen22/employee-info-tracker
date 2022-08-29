@@ -91,7 +91,7 @@ function next() {
         if (data.adding === "Engineer") {
             engineerPrompt()
         } else if (data.adding === "Intern") {
-            // add intern function
+            internPrompt()
         } else {
             //add writetofile function
         }
@@ -106,4 +106,13 @@ function engineerPrompt() {
     })
 }
 //intern function to prompt inter questions and push new engineer, exactly like engineer function but - github + school.
+function internPrompt() {
+    inquirer.prompt(internQs).then(({name, email, id, college}) => {
+        internArr.push(new Intern (name, email, id, college))
+        next()
+    })
+}
 
+function writeToFile(managerArr, engineerArr, internArr) {
+    //fs.writeToFile(".pathtohtml", need to link a js from src? with a return statement(managerArr, engineerArr, internArr), (err) => (err) ? console.log("could not generate html") : console.log("HTML successfully generated")
+}
