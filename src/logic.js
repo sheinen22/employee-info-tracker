@@ -11,13 +11,27 @@ function fillData(managerArr, engineerArr, internArr) {
 </head>
 <body>
     <div>
-        manager info here***********
+        ${managerArr.map((data) => managerFill(data))}
     </div>
     <div>
         engineer info here ***********
     </div>
     <div>
         intern info here************
+    </div>
+    `
+}
+
+const managerFill = (manager) => {
+    return `
+    <div class="card" id="manager">
+        <div>${manager.getRole()}</div>
+        <div class="card-body">
+            <div>Name: ${manager.getName()}</div>
+            <div>ID: ${manager.getId()}</div>
+            <div>Email: ${manager.getEmail}</div>
+            <div>Office Number: ${manager.getOfficeNumber()}</div> 
+        </div>
     </div>
     `
 }
