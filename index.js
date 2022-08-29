@@ -3,9 +3,9 @@ const inquirer = require("inquirer");
 const jest = require("jest");
 const fillData = require('./src/logic')
 
-const Intern = require('./Develop/lib/Intern');
-const Engineer = require('./Develop/lib/Engineer');
-const Manager = require('./Develop/lib/Manager');
+const Intern = require('./lib/intern');
+const Engineer = require('./lib/engineer');
+const Manager = require('./lib/manager');
 
 //need an update area - possibly three empty arrays?
 const managerArr = [];

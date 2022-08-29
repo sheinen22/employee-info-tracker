@@ -58,7 +58,7 @@ const internFill = (intern) => {
             <div>Name: ${intern.getName()}</div>
             <div>ID: ${intern.getId()}</div>
             <div>Email: ${intern.getEmail()}</div>
-            <div>School: ${intern.getCollege()}</div> 
+            <div>School: ${intern.getSchool()}</div> 
         </div>
     </div>
     `
