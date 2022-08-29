@@ -93,7 +93,7 @@ function next() {
         } else if (data.adding === "Intern") {
             internPrompt()
         } else {
-            //add writetofile function
+            writeToFile()
         }
     })
 }
